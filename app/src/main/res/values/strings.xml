@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyCalculator</string>
+    <string name="app_name">ASA Calculator</string>
     <string name="btn0">0</string>
     <string name="btn1">1</string>
     <string name="btn2">2</string>
