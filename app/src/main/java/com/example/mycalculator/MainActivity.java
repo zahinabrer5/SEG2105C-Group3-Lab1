@@ -12,7 +12,7 @@ import java.math.BigDecimal;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0, btnDot, btnClear, btnPlus, btnMinus, btnMult, btnDivision, btnEqual, btnLeftParen, btnRightParen, btnSqrt, btnPower;
+    Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0, btnDot, btnComma, btnClear, btnPlus, btnMinus, btnMult, btnDivision, btnEqual, btnLeftParen, btnRightParen, btnSqrt, btnPower, btnLog10, btnLn, btnFloor, btnCeil, btnSin, btnCos, btnExp;
     TextView textDisplay;
 
     // This is to evaluate the math expression
@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn9 = findViewById(R.id.btn9);
         btn0 = findViewById(R.id.btn0);
         btnDot = findViewById(R.id.btn_dot);
+        btnComma = findViewById(R.id.btn_comma);
         btnPlus = findViewById(R.id.btn_plus);
         btnMinus = findViewById(R.id.btn_minus);
         btnMult = findViewById(R.id.btn_mult);
@@ -42,6 +43,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnRightParen = findViewById(R.id.btn_right_paren);
         btnSqrt = findViewById(R.id.btn_sqrt);
         btnPower = findViewById(R.id.btn_power);
+        btnLog10 = findViewById(R.id.btn_log10);
+        btnLn = findViewById(R.id.btn_ln);
+        btnFloor = findViewById(R.id.btn_floor);
+        btnCeil = findViewById(R.id.btn_ceil);
+        btnSin = findViewById(R.id.btn_sin);
+        btnCos = findViewById(R.id.btn_cos);
+        btnExp = findViewById(R.id.btn_exp);
         btnEqual = findViewById(R.id.btn_equal);
         btnClear = findViewById(R.id.btn_clear);
         textDisplay = findViewById(R.id.textview_input_display);
@@ -61,6 +69,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn9.setOnClickListener(this);
         btn0.setOnClickListener(this);
         btnDot.setOnClickListener(this);
+        btnComma.setOnClickListener(this);
         btnPlus.setOnClickListener(this);
         btnMinus.setOnClickListener(this);
         btnMult.setOnClickListener(this);
@@ -69,6 +78,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnRightParen.setOnClickListener(this);
         btnSqrt.setOnClickListener(this);
         btnPower.setOnClickListener(this);
+        btnLog10.setOnClickListener(this);
+        btnLn.setOnClickListener(this);
+        btnFloor.setOnClickListener(this);
+        btnCeil.setOnClickListener(this);
+        btnSin.setOnClickListener(this);
+        btnCos.setOnClickListener(this);
+        btnExp.setOnClickListener(this);
         btnEqual.setOnClickListener(this);
         btnClear.setOnClickListener(this);
     }
@@ -122,6 +138,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_dot:
                 addNumber(".");
                 break;
+            case R.id.btn_comma:
+                addNumber(",");
+                break;
             case R.id.btn_left_paren:
                 addNumber("(");
                 break;
@@ -130,6 +149,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_sqrt:
                 addNumber("sqrt(");
+                break;
+            case R.id.btn_log10:
+                addNumber("log10(");
+                break;
+            case R.id.btn_ln:
+                addNumber("log(");
+                break;
+            case R.id.btn_floor:
+                addNumber("floor(");
+                break;
+            case R.id.btn_ceil:
+                addNumber("ceil(");
+                break;
+            case R.id.btn_sin:
+                addNumber("sin(");
+                break;
+            case R.id.btn_cos:
+                addNumber("cos(");
+                break;
+            case R.id.btn_exp:
+                addNumber("e^(");
                 break;
             case R.id.btn_power:
                 addNumber("^");
