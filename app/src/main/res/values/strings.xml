@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ASA Calculator</string>
+    <string name="app_name">Calcoolator</string>
     <string name="btn0">0</string>
     <string name="btn1">1</string>
     <string name="btn2">2</string>
@@ -19,4 +19,16 @@
     <string name="mult">×</string>
     <string name="division">÷</string>
     <string name="display">Enter value</string>
+    <string name="floor">⌊x⌋</string>
+    <string name="ceil">⌈x⌉</string>
+    <string name="sin">sin</string>
+    <string name="cos">cos</string>
+    <string name="log10">log10</string>
+    <string name="ln">ln</string>
+    <string name="exp">exp</string>
+    <string name="pow">xʸ</string>
+    <string name="left_paren">(</string>
+    <string name="right_paren">)</string>
+    <string name="comma">,</string>
+    <string name="sqrt">√</string>
 </resources>
