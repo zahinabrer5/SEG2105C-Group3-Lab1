@@ -278,11 +278,14 @@
     <TextView
         android:id="@+id/textview_input_display"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:gravity="end"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:gravity="bottom|end"
         android:hint="@string/display"
-        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:scrollbars="vertical"
         android:textSize="50sp"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

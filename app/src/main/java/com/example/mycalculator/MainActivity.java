@@ -2,6 +2,7 @@ package com.example.mycalculator;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -53,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnEqual = findViewById(R.id.btn_equal);
         btnClear = findViewById(R.id.btn_clear);
         textDisplay = findViewById(R.id.textview_input_display);
+        textDisplay.setMovementMethod(new ScrollingMovementMethod());
 
         setClickListeners();
     }
@@ -183,6 +185,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     textDisplay.setText("Error");
 //                    clearDisplay();
                 }
+                scrollToBottom();
                 break;
             case R.id.btn_clear:
                 clearDisplay();
@@ -199,9 +202,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @SuppressLint("SetTextI18n")
     private void addNumber(String number) {
         textDisplay.setText(textDisplay.getText() + number);
+        scrollToBottom();
     }
 
     private void clearDisplay() {
         textDisplay.setText("");
+        scrollToBottom();
+    }
+
+    private void scrollToBottom() {
+        textDisplay.post(() -> {
+            int scrollAmount = textDisplay.getLayout().getLineTop(textDisplay.getLineCount()) - textDisplay.getHeight();
+            if (scrollAmount > 0) {
+                textDisplay.scrollTo(0, scrollAmount);
+            } else {
+                textDisplay.scrollTo(0, 0);
+            }
+        });
     }
 }
