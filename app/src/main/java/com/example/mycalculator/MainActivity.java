@@ -213,11 +213,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void scrollToBottom() {
         textDisplay.post(() -> {
             int scrollAmount = textDisplay.getLayout().getLineTop(textDisplay.getLineCount()) - textDisplay.getHeight();
-            if (scrollAmount > 0) {
-                textDisplay.scrollTo(0, scrollAmount);
-            } else {
-                textDisplay.scrollTo(0, 0);
-            }
+            textDisplay.scrollTo(0, Math.max(scrollAmount, 0));
         });
     }
 }
